@@ -96,6 +96,7 @@ function createSkybox(scene) {
     skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
     skybox.material = skyboxMaterial;
     skybox.checkCollisions = true;
+
     // let skyboxPhys = new BABYLON.PhysicsImpostor(skybox, BABYLON.PhysicsImpostor.BoxImpostor, {mass: 0, restitution: 0.9}, scene);
 }
 
@@ -140,7 +141,7 @@ function createFollowCamera(scene, target) {
 
 let zMovement = 5;
 function createTank(scene) {
-    let tank = new BABYLON.MeshBuilder.CreateCylinder("heroTank", {height:4, diameter:4}, scene);
+    let tank = new BABYLON.MeshBuilder.CreateCylinder("heroTank", {height:2.5, diameter:4}, scene);
     let tankMaterial = new BABYLON.StandardMaterial("tankMaterial", scene);
     tankMaterial.diffuseColor = new BABYLON.Color3(.20, .20, .20);
     tankMaterial.emissiveColor = new BABYLON.Color3.Black;
